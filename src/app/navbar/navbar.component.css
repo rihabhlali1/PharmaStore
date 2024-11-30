@@ -1,0 +1,91 @@
+/* General Styling */
+.navbar {
+    background: linear-gradient(to right, #94ec98, #8ce490, #253e27); /* Beautiful gradient of green */
+    color: white;
+    padding: 12px 30px; /* Increased padding for a bolder look */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly more prominent shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern and clean font */
+}
+
+/* Title Styling (PharmaStore) */
+.navbar-logo {
+    font-size: 2rem; /* Make the title bigger */
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-right: auto; /* Align the title to the left */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-logo:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Navbar Links Styling */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 35px; /* Increased gap for better spacing */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem; /* Make the font size bigger */
+    font-weight: 600; /* Bold font for better readability */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+}
+
+.navbar-links a:hover {
+    color: #1e88e5; /* Change to a smooth blue color on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+.navbar-links a:active {
+    color: #ffeb3b; /* A soft yellow when the link is clicked */
+}
+
+/* Cart Styling */
+.cart-count {
+    background-color: #ff5722;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+/* Add spacing to links */
+.navbar-links li {
+    margin-left: 25px; /* Add some margin between each link */
+}
+
+/* Center the navbar items */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Prevent navbar from stretching too much on large screens */
+    
+    margin-right: 50px;
+}
+
+/* Add Products link */
+.navbar-links li:last-child {
+    margin-left: 50px; /* Add spacing to the Add Products link */
+}
