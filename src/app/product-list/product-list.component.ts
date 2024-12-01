@@ -12,6 +12,8 @@ export class ProductListComponent implements OnInit {
   products: any[] = [];
   filteredProducts: any[] = [];
   selectedCategoryId: number | null = null;
+  cart: any[] = [];
+  router: any;
 
   constructor(private productService: ProductService) {}
 
@@ -44,4 +46,12 @@ export class ProductListComponent implements OnInit {
     console.log("Filtered Products:", this.filteredProducts);
   }
   
+  addToCart(product: any): void {
+    // Add the product to the cart
+    this.cart.push(product);
+    console.log('Cart:', this.cart);
+
+    // Optionally, navigate to the cart page
+    this.router.navigate(['/cart'], { state: { cart: this.cart } });
+  }
 }
