@@ -3,22 +3,18 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'http://localhost:3000/products';
+  private apiUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) {}
 
+  getCategories(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/categories`);
+  }
+
   getProducts(): Observable<any[]> {
-    return this.http.get<any[]>(this.apiUrl);
-  }
-
-  getProductById(id: number): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/${id}`);
-  }
-
-  addToCart(product: any): void {
-    // Logic for adding to cart
+    return this.http.get<any[]>(`${this.apiUrl}/products`);
   }
 }
