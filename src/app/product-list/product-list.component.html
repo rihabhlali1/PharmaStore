@@ -1,26 +1,29 @@
 <div class="product-list-container">
- <h1>Our Products</h1>
+  <h1>Our Products</h1>
 
- <!-- Category Filter -->
- <div class="category-filter">
-   <button 
-     *ngFor="let category of categories" 
-     (click)="filterByCategory(category.id)" 
-     [class.active]="selectedCategoryId === category.id">
-     {{ category.name }}
-   </button>
-   <button (click)="filterByCategory(null)" [class.active]="selectedCategoryId === null">
-     All Categories
-   </button>
- </div>
+  <!-- Category Filter -->
+  <div class="category-filter">
+    <button 
+      *ngFor="let category of categories" 
+      (click)="filterByCategory(category.id)" 
+      [class.active]="selectedCategoryId === category.id">
+      {{ category.name }}
+    </button>
+    <button (click)="filterByCategory(null)" [class.active]="selectedCategoryId === null">
+      All Categories
+    </button>
+  </div>
 
- <!-- Products -->
- <div class="products-grid">
-   <div class="product-card" *ngFor="let product of filteredProducts">
-     <img [src]="product.image" [alt]="product.name" />
-     <h2>{{ product.name }}</h2>
-     <p>{{ product.description }}</p>
-     <p class="price">Price: ${{ product.price }}</p>
-   </div>
- </div>
+  <!-- Products -->
+  <div class="products-grid">
+    <div *ngIf="filteredProducts.length === 0" class="no-products">
+      No products available in this category.
+    </div>
+    <div class="product-card" *ngFor="let product of filteredProducts">
+      <img [src]="product.image" [alt]="product.name" />
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <p class="price">Price: ${{ product.price }}</p>
+    </div>
+  </div>
 </div>

@@ -30,8 +30,18 @@ export class ProductListComponent implements OnInit {
 
   filterByCategory(categoryId: number | null): void {
     this.selectedCategoryId = categoryId;
+  
+    console.log("Selected Category ID:", categoryId);
+    console.log("All Products:", this.products);
+  
     this.filteredProducts = categoryId
-      ? this.products.filter((product) => product.categoryId === categoryId)
+      ? this.products.filter((product) => {
+          console.log(`Checking product: ${product.name}, categoryId: ${product.categoryId}`);
+          return +product.categoryId === +categoryId;
+        })
       : this.products;
+  
+    console.log("Filtered Products:", this.filteredProducts);
   }
+  
 }

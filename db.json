@@ -15,17 +15,65 @@
     },
     { 
       "id": 2,
+      "name": "Ibuprofen", 
+      "description": "Reduces inflammation and pain.", 
+      "price": 12, 
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 1
+    },
+    { 
+      "id": 3,
+      "name": "Aspirin", 
+      "description": "Pain relief and blood thinner.", 
+      "price": 8, 
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 1
+    },
+    { 
+      "id": 4,
       "name": "Vitamin C", 
       "description": "Boosts immunity and energy levels.", 
       "price": 20, 
       "image": "https://via.placeholder.com/150",
       "categoryId": 2
     },
+    { 
+      "id": 5,
+      "name": "Vitamin D", 
+      "description": "Supports bone health and immunity.", 
+      "price": 18, 
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 2
+    },
+    { 
+      "id": 6,
+      "name": "Multivitamins", 
+      "description": "Essential daily vitamins for overall health.", 
+      "price": 25, 
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 2
+    },
     {
-      "id": 3,
+      "id": 7,
       "name": "Aloe Vera Gel",
       "description": "Soothes and moisturizes skin.",
       "price": 15,
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 3
+    },
+    {
+      "id": 8,
+      "name": "Sunscreen SPF 50",
+      "description": "Protects against harmful UV rays.",
+      "price": 22,
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 3
+    },
+    {
+      "id": 9,
+      "name": "Moisturizing Cream",
+      "description": "Hydrates and nourishes skin.",
+      "price": 18,
       "image": "https://via.placeholder.com/150",
       "categoryId": 3
     }
