@@ -13,6 +13,9 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     // Simulate fetching cart count from a service
-    this.cartCount = 3; // Replace with dynamic cart count logic
+    this.cartCount = 0; // Replace with dynamic cart count logic
+  }
+  updateCartCount(count: number) {
+    this.cartCount = count;
   }
 }

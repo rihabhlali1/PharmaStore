@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import { CartService } from '../services/cart.service'; // Import CartService
 
 @Component({
   selector: 'app-product-list',
@@ -15,7 +16,7 @@ export class ProductListComponent implements OnInit {
   cart: any[] = [];
   router: any;
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private cartService: CartService) {}
 
   ngOnInit(): void {
     // Fetch categories
@@ -47,11 +48,10 @@ export class ProductListComponent implements OnInit {
   }
   
   addToCart(product: any): void {
-    // Add the product to the cart
-    this.cart.push(product);
-    console.log('Cart:', this.cart);
+    // Call the CartService to add the product to the cart
+    this.cartService.addToCart(product.id);
 
     // Optionally, navigate to the cart page
-    this.router.navigate(['/cart'], { state: { cart: this.cart } });
+    this.router.navigate(['/cart']);
   }
 }

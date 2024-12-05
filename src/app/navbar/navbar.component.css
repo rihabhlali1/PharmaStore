@@ -89,3 +89,69 @@
 .navbar-links li:last-child {
     margin-left: 50px; /* Add spacing to the Add Products link */
 }
+
+/* Cart Icon Styling */
+.navbar-links li:last-child {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Cart icon container */
+  .navbar-links a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem; /* Larger icon for better visibility */
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+  }
+  
+  .navbar-links a:hover {
+    color: #1e88e5; /* Change to blue on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+  }
+  
+  /* Cart Icon */
+  .navbar-links a i {
+    font-size: 2rem; /* Adjust icon size */
+    transition: transform 0.3s ease; /* Smooth icon scaling */
+  }
+  
+  .navbar-links a:hover i {
+    transform: scale(1.1); /* Increase size slightly on hover */
+  }
+  
+  /* Cart Count Badge */
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff5722; /* Bright color for visibility */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for the badge */
+    transition: transform 0.3s ease; /* Add smooth transition */
+  }
+  
+  /* Cart Count Hover Effect */
+  .navbar-links a:hover .cart-count {
+    transform: scale(1.2); /* Slightly grow the badge on hover */
+  }
+  
+  /* On Small Screens: Adjust icon and badge size */
+  @media screen and (max-width: 768px) {
+    .navbar-links a i {
+      font-size: 1.5rem; /* Slightly smaller icon on smaller screens */
+    }
+    .cart-count {
+      font-size: 0.8rem; /* Adjust font size for small screens */
+      padding: 4px 8px; /* Reduce padding for smaller screens */
+    }
+  }
+  

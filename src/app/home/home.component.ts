@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +11,12 @@ import { DataService } from '../services/data.service';
 export class HomeComponent implements OnInit {
   categories: any[] = [];
   productsByCategory: { [key: string]: any[] } = {};
-  popularProducts: any[] = []; // Added for Popular Products section
+  popularProducts: any[] = [];
 
-  constructor(private dataService: DataService) {}
+  constructor(
+    private dataService: DataService,
+    private cartService: CartService
+  ) {}
 
   ngOnInit(): void {
     // Fetch categories and products
@@ -21,7 +25,7 @@ export class HomeComponent implements OnInit {
 
       this.dataService.getProducts().subscribe((products) => {
         this.groupProductsByCategory(products);
-        this.populatePopularProducts(products); // Added for Popular Products
+        this.populatePopularProducts(products);
       });
     });
   }
@@ -35,10 +39,10 @@ export class HomeComponent implements OnInit {
   }
 
   populatePopularProducts(products: any[]): void {
-    this.popularProducts = products.filter((product) => product.isPopular); // Filtering popular products
+    this.popularProducts = products.filter((product) => product.isPopular);
   }
 
   addToCart(product: any) {
-    console.log('Added to cart:', product);
+    this.cartService.addToCart(product);
   }
 }

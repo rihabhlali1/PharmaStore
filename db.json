@@ -2,7 +2,10 @@
   "categories": [
     { "id": 1, "name": "Pain Relievers" },
     { "id": 2, "name": "Vitamins" },
-    { "id": 3, "name": "Skin Care" }
+    { "id": 3, "name": "Skin Care" },
+    { "id": 4, "name": "Sunscreens" },
+    { "id": 5, "name": "Makeup" },
+    { "id": 6, "name": "Hair Care" }
   ],
   "products": [
     { 
@@ -67,7 +70,7 @@
       "description": "Protects against harmful UV rays.",
       "price": 22,
       "image": "https://via.placeholder.com/150",
-      "categoryId": 3
+      "categoryId": 4
     },
     {
       "id": 9,
@@ -76,6 +79,54 @@
       "price": 18,
       "image": "https://via.placeholder.com/150",
       "categoryId": 3
+    },
+    {
+      "id": 10,
+      "name": "Lip Balm SPF 15",
+      "description": "Protects lips from UV damage.",
+      "price": 5,
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 4
+    },
+    {
+      "id": 11,
+      "name": "Nail Polish",
+      "description": "Gives a glossy finish to nails.",
+      "price": 8,
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 5
+    },
+    {
+      "id": 12,
+      "name": "Foundation",
+      "description": "Smooths and evens out skin tone.",
+      "price": 30,
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 5
+    },
+    {
+      "id": 13,
+      "name": "Shampoo",
+      "description": "Cleans and nourishes hair.",
+      "price": 12,
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 6
+    },
+    {
+      "id": 14,
+      "name": "Conditioner",
+      "description": "Moisturizes and detangles hair.",
+      "price": 15,
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 6
+    },
+    {
+      "id": 15,
+      "name": "Hair Oil",
+      "description": "Nourishes and strengthens hair.",
+      "price": 20,
+      "image": "https://via.placeholder.com/150",
+      "categoryId": 6
     }
   ]
 }
