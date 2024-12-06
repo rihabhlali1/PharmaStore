@@ -13,7 +13,7 @@
       "name": "Paracetamol", 
       "description": "Pain reliever and fever reducer.", 
       "price": 10, 
-      "image": "https://via.placeholder.com/150",
+      "image": "https://phabcart.imgix.net/cdn/scdn/images/uploads/m0459_web.jpg?auto=compress&lossless=1&w=600",
       "categoryId": 1
     },
     { 
@@ -21,7 +21,7 @@
       "name": "Ibuprofen", 
       "description": "Reduces inflammation and pain.", 
       "price": 12, 
-      "image": "https://via.placeholder.com/150",
+      "image": "https://www.medicinedirect.co.uk/media/catalog/product/cache/8bf3693ed458c257f5171ffffa4e8921/2/2/220-4956.jpg",
       "categoryId": 1
     },
     { 
@@ -29,7 +29,7 @@
       "name": "Aspirin", 
       "description": "Pain relief and blood thinner.", 
       "price": 8, 
-      "image": "https://via.placeholder.com/150",
+      "image": "https://medicinaonline.ae/cdn/shop/products/AspirinC_400MG_10Tabs_PI.jpg?v=1612788901",
       "categoryId": 1
     },
     { 
@@ -37,7 +37,7 @@
       "name": "Vitamin C", 
       "description": "Boosts immunity and energy levels.", 
       "price": 20, 
-      "image": "https://via.placeholder.com/150",
+      "image": "https://www.bioherbs.tn/cdn/shop/products/C-complexe-1024x1024-397760.jpg?v=1678571564&width=1800",
       "categoryId": 2
     },
     { 
@@ -45,7 +45,7 @@
       "name": "Vitamin D", 
       "description": "Supports bone health and immunity.", 
       "price": 18, 
-      "image": "https://via.placeholder.com/150",
+      "image": "https://www.jamiesonvitamins.com/cdn/shop/files/c04368a6ac291f8018fa6611da04638f49c30ab8d2ab5f38104a432a150e26d7.png?v=1690982438&width=640",
       "categoryId": 2
     },
     { 
@@ -53,7 +53,7 @@
       "name": "Multivitamins", 
       "description": "Essential daily vitamins for overall health.", 
       "price": 25, 
-      "image": "https://via.placeholder.com/150",
+      "image": "https://www.bioherbs.tn/cdn/shop/products/multivitamins-boite-404902.jpg?v=1678571556&width=1800",
       "categoryId": 2
     },
     {
@@ -61,7 +61,7 @@
       "name": "Aloe Vera Gel",
       "description": "Soothes and moisturizes skin.",
       "price": 15,
-      "image": "https://via.placeholder.com/150",
+      "image": "https://i5.walmartimages.com/seo/Aloe-Vera-Soothing-Gel-100-Pure-Moisturizer-300-ml_8be9c4ee-ee3f-401b-b961-34cb67676717_1.145d8e71f2b695bca1b062efc8466dce.png",
       "categoryId": 3
     },
     {
@@ -69,7 +69,7 @@
       "name": "Sunscreen SPF 50",
       "description": "Protects against harmful UV rays.",
       "price": 22,
-      "image": "https://via.placeholder.com/150",
+      "image": "https://m.media-amazon.com/images/I/51LawcY+-0L._SL1000_.jpg",
       "categoryId": 4
     },
     {
@@ -77,7 +77,7 @@
       "name": "Moisturizing Cream",
       "description": "Hydrates and nourishes skin.",
       "price": 18,
-      "image": "https://via.placeholder.com/150",
+      "image": "https://i5.walmartimages.com/seo/CeraVe-Moisturizing-Cream-Face-Moisturizer-Body-Lotion-for-Normal-to-Very-Dry-Skin-16-oz_63f2b83a-7915-4e2c-9d44-2840e1389e91.46fb38549baa1978bf189a170752c184.jpeg",
       "categoryId": 3
     },
     {
@@ -85,7 +85,7 @@
       "name": "Lip Balm SPF 15",
       "description": "Protects lips from UV damage.",
       "price": 5,
-      "image": "https://via.placeholder.com/150",
+      "image": "https://zynah.me/cdn/shop/files/SUN_SEALIPBALMSPF15ZYNAH.webp?v=1694460694",
       "categoryId": 4
     },
     {
@@ -93,7 +93,7 @@
       "name": "Nail Polish",
       "description": "Gives a glossy finish to nails.",
       "price": 8,
-      "image": "https://via.placeholder.com/150",
+      "image": "https://m.media-amazon.com/images/I/61ZdxMIBnWL._SL1500_.jpg",
       "categoryId": 5
     },
     {
@@ -101,7 +101,7 @@
       "name": "Foundation",
       "description": "Smooths and evens out skin tone.",
       "price": 30,
-      "image": "https://via.placeholder.com/150",
+      "image": "https://i5.walmartimages.com/seo/Maybelline-Fit-Me-Matte-Poreless-Liquid-Oil-Free-Foundation-Makeup-Ivory-1-Count-Packaging-May-Vary_012139ce-0e92-4793-96b3-2bcb3b187e03.ff435253fa9d640a00a2b605890d9c2b.jpeg",
       "categoryId": 5
     },
     {
@@ -109,7 +109,7 @@
       "name": "Shampoo",
       "description": "Cleans and nourishes hair.",
       "price": 12,
-      "image": "https://via.placeholder.com/150",
+      "image": "https://www.paranet.tn/8372-large_default/byphasse-shampooing-hair-pro-cheveux-boucles-750-.jpg",
       "categoryId": 6
     },
     {
@@ -117,7 +117,7 @@
       "name": "Conditioner",
       "description": "Moisturizes and detangles hair.",
       "price": 15,
-      "image": "https://via.placeholder.com/150",
+      "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/smt/smt29062/l/14.jpg",
       "categoryId": 6
     },
     {
@@ -125,7 +125,7 @@
       "name": "Hair Oil",
       "description": "Nourishes and strengthens hair.",
       "price": 20,
-      "image": "https://via.placeholder.com/150",
+      "image": "https://www.cultbeauty.com/images?url=https://static.thcdn.com/productimg/original/13530999-1954963555513017.jpg&format=webp&auto=avif&width=985&height=985&fit=cover",
       "categoryId": 6
     }
   ]
