@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { ProductService } from '../services/product.service'; // Use ProductService
 import { CartService } from '../services/cart.service';
 
 @Component({
@@ -10,39 +10,42 @@ import { CartService } from '../services/cart.service';
 })
 export class HomeComponent implements OnInit {
   categories: any[] = [];
-  productsByCategory: { [key: string]: any[] } = {};
-  popularProducts: any[] = [];
+  products: any[] = [];
+  groupedProducts: { [categoryId: number]: any[] } = {};  // Group products by category
+  selectedCategoryId: number | null = null;
+  cart: any[] = [];
+  router: any;
 
-  constructor(
-    private dataService: DataService,
-    private cartService: CartService
-  ) {}
+  constructor(private productService: ProductService, private cartService: CartService) {}
 
   ngOnInit(): void {
-    // Fetch categories and products
-    this.dataService.getCategories().subscribe((categories) => {
+    // Fetch categories
+    this.productService.getCategories().subscribe((categories) => {
       this.categories = categories;
+    });
 
-      this.dataService.getProducts().subscribe((products) => {
-        this.groupProductsByCategory(products);
-        this.populatePopularProducts(products);
-      });
+    // Fetch products and group them by category
+    this.productService.getProducts().subscribe((products) => {
+      this.products = products;
+      this.groupProductsByCategory(products); // Group products initially
     });
   }
 
   groupProductsByCategory(products: any[]): void {
-    this.categories.forEach((category) => {
-      this.productsByCategory[category.name] = products.filter(
-        (product) => product.categoryId === category.id
-      );
+    this.groupedProducts = {};  // Reset the grouped products
+    products.forEach((product) => {
+      if (!this.groupedProducts[product.categoryId]) {
+        this.groupedProducts[product.categoryId] = [];
+      }
+      this.groupedProducts[product.categoryId].push(product);
     });
   }
 
-  populatePopularProducts(products: any[]): void {
-    this.popularProducts = products.filter((product) => product.isPopular);
-  }
+  addToCart(product: any): void {
+    // Call the CartService to add the product to the cart
+    this.cartService.addToCart(product.id);
 
-  addToCart(product: any) {
-    this.cartService.addToCart(product);
+    // Optionally, navigate to the cart page
+    this.router.navigate(['/cart']);
   }
 }

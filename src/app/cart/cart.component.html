@@ -1,34 +1,48 @@
 <div class="cart-container">
-    <h1>Your Cart</h1>
-  
-    <!-- Cart Items -->
-    <div *ngIf="cartItems.length === 0" class="empty-cart">
-      Your cart is empty. Start shopping now!
-    </div>
-  
-    <div *ngIf="cartItems.length > 0">
-      <div class="cart-item" *ngFor="let item of cartItems">
-        <img [src]="item.product.image" [alt]="item.product.name" />
-        <div class="item-details">
-          <h2>{{ item.product.name }}</h2>
-          <p>{{ item.product.description }}</p>
-          <div class="quantity">
-            <button (click)="decreaseQuantity(item)">-</button>
-            <input type="number" [(ngModel)]="item.quantity" [min]="1" (change)="updateQuantity(item)" />
-            <button (click)="increaseQuantity(item)">+</button>
-          </div>
-          <p class="price">Price: ${{ item.product.price * item.quantity }}</p>
-          <button (click)="removeFromCart(item)">Remove</button>
-        </div>
-      </div>
-  
-      <!-- Cart Summary -->
-      <div class="cart-summary">
-        <h3>Total: ${{ getTotal() }}</h3>
-        <button (click)="clearCart()">Clear Cart</button>
-        <button (click)="placeOrder()">Place Order</button>
-        <button (click)="cancelOrder()">Cancel Order</button>
-      </div>
+  <h1>Your Cart</h1>
+
+  <!-- Empty Cart Message -->
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    Your cart is empty. Start shopping now!
+  </div>
+
+  <!-- Cart Table -->
+  <div *ngIf="cartItems.length > 0">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Description</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <td><img [src]="item.product.image" [alt]="item.product.name" /></td>
+          <td>{{ item.product.name }}<br />{{ item.product.description }}</td>
+          <td>
+            <div class="quantity">
+              <button (click)="decreaseQuantity(item)">-</button>
+              <input type="number" [(ngModel)]="item.quantity" [min]="1" (change)="updateQuantity(item)" />
+              <button (click)="increaseQuantity(item)">+</button>
+            </div>
+          </td>
+          <td>${{ item.product.price * item.quantity }}</td>
+          <td>
+            <button class="remove-button" (click)="removeFromCart(item)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+      <h3>Total: ${{ getTotal() }}</h3>
+      <button (click)="clearCart()">Clear Cart</button>
+      <button (click)="placeOrder()">Place Order</button>
+      <button (click)="cancelOrder()">Cancel Order</button>
     </div>
   </div>
-  
+</div>

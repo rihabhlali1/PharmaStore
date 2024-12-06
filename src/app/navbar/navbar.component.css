@@ -1,157 +1,154 @@
 /* General Styling */
 .navbar {
-    background: linear-gradient(to right, #94ec98, #8ce490, #253e27); /* Beautiful gradient of green */
-    color: white;
-    padding: 12px 30px; /* Increased padding for a bolder look */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly more prominent shadow */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern and clean font */
+  background: linear-gradient(to right, #7b5ca8, #5c89d6); /* Calming purple to blue gradient */
+  color: white;
+  padding: 12px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Title Styling (PharmaStore) */
 .navbar-logo {
-    font-size: 2rem; /* Make the title bigger */
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    margin-right: auto; /* Align the title to the left */
-    transition: transform 0.3s ease; /* Smooth hover effect */
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-right: auto;
+  transition: transform 0.3s ease;
 }
 
 .navbar-logo:hover {
-    transform: scale(1.1); /* Slightly increase size on hover */
+  transform: scale(1.1);
 }
 
 /* Navbar Links Styling */
 .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 35px; /* Increased gap for better spacing */
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 35px; /* Spacing for better visual separation */
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-links li {
-    display: inline;
+  display: inline;
 }
 
 .navbar-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem; /* Make the font size bigger */
-    font-weight: 600; /* Bold font for better readability */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-links a:hover {
-    color: #1e88e5; /* Change to a smooth blue color on hover */
-    transform: translateY(-3px); /* Slight lift effect on hover */
+  color: #d4e6f1; /* Soft blue-white on hover */
+  transform: translateY(-3px); /* Gentle lift effect */
 }
 
 .navbar-links a:active {
-    color: #ffeb3b; /* A soft yellow when the link is clicked */
+  color: #f7dc6f; /* Soft yellow on click */
 }
 
 /* Cart Styling */
 .cart-count {
-    background-color: #ff5722;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 3px 8px;
-    border-radius: 50%;
-    margin-left: 5px;
+  background-color: #e74c3c; /* Vibrant red for visibility */
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 50%;
+  margin-left: 5px;
 }
 
 /* Add spacing to links */
 .navbar-links li {
-    margin-left: 25px; /* Add some margin between each link */
+  margin-left: 25px;
 }
 
 /* Center the navbar items */
 .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-    max-width: 1200px; /* Prevent navbar from stretching too much on large screens */
-    
-    margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-right: 50px;
 }
 
 /* Add Products link */
 .navbar-links li:last-child {
-    margin-left: 50px; /* Add spacing to the Add Products link */
+  margin-left: 50px;
 }
 
 /* Cart Icon Styling */
 .navbar-links li:last-child {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Cart icon container */
-  .navbar-links a {
-    display: flex;
-    align-items: center;
-    position: relative;
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem; /* Larger icon for better visibility */
-    font-weight: 600;
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
-  }
-  
-  .navbar-links a:hover {
-    color: #1e88e5; /* Change to blue on hover */
-    transform: translateY(-3px); /* Slight lift effect on hover */
-  }
-  
-  /* Cart Icon */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem; /* Larger icon for prominence */
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #a29bfe; /* Lavender hover effect */
+  transform: translateY(-3px); /* Lift effect */
+}
+
+/* Cart Icon */
+.navbar-links a i {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar-links a:hover i {
+  transform: scale(1.1); /* Slight zoom */
+}
+
+/* Cart Count Badge */
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #fd79a8; /* Light pink for soft contrast */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+/* Cart Count Hover Effect */
+.navbar-links a:hover .cart-count {
+  transform: scale(1.2); /* Slight growth effect */
+}
+
+/* Responsive Design: Adjust for Small Screens */
+@media screen and (max-width: 768px) {
   .navbar-links a i {
-    font-size: 2rem; /* Adjust icon size */
-    transition: transform 0.3s ease; /* Smooth icon scaling */
+      font-size: 1.5rem;
   }
-  
-  .navbar-links a:hover i {
-    transform: scale(1.1); /* Increase size slightly on hover */
-  }
-  
-  /* Cart Count Badge */
   .cart-count {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: #ff5722; /* Bright color for visibility */
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for the badge */
-    transition: transform 0.3s ease; /* Add smooth transition */
+      font-size: 0.8rem;
+      padding: 4px 8px;
   }
-  
-  /* Cart Count Hover Effect */
-  .navbar-links a:hover .cart-count {
-    transform: scale(1.2); /* Slightly grow the badge on hover */
-  }
-  
-  /* On Small Screens: Adjust icon and badge size */
-  @media screen and (max-width: 768px) {
-    .navbar-links a i {
-      font-size: 1.5rem; /* Slightly smaller icon on smaller screens */
-    }
-    .cart-count {
-      font-size: 0.8rem; /* Adjust font size for small screens */
-      padding: 4px 8px; /* Reduce padding for smaller screens */
-    }
-  }
-  
+}

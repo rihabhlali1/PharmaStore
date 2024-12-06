@@ -1,201 +1,142 @@
-/* General Styling */
-.home-page {
-  font-family: 'Arial', sans-serif;
+.home {
   padding: 20px;
-  background-color: #f4f4f4;
-  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Hero Section */
-.hero-section {
-  background: linear-gradient(to bottom right, #4caf50, #2196f3);
-  color: white;
+h1 {
   text-align: center;
-  padding: 50px 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-.hero-section h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.hero-section p {
-  font-size: 1.3rem;
   margin-bottom: 20px;
+  color: #4c4cad; /* Vibrant indigo for the title */
 }
 
-.hero-section .btn {
-  background-color: white;
-  color: #4caf50;
-  border: 2px solid white;
-  padding: 12px 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.hero-section .btn:hover {
-  background-color: #4caf50;
-  color: white;
-  border-color: #4caf50;
-}
-
-/* Category Section */
-.category-section h2 {
-  text-align: center;
-  color: #4caf50;
-  margin: 50px 0 30px;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.categories {
+/* Transparent Parapharmacy Intro Section */
+.parapharmacy-intro {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
-.category {
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  width: 100%;
-  max-width: 350px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.category:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.category-header {
-  text-align: center;
-  background-color: #f5f5f5;
-  padding: 12px;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.85); /* Slightly more opaque for readability */
+  padding: 20px;
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.category-header h3 {
-  font-size: 1.6rem;
-  color: #2196f3;
-  margin: 0;
+.parapharmacy-text {
+  max-width: 60%;
 }
 
-/* Product Section */
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.product {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  text-align: center;
-  width: 220px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-}
-
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.product img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.product img:hover {
-  transform: scale(1.1);
-}
-
-.product h5 {
-  margin: 15px 0;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.product p {
-  font-size: 1rem;
-  color: #777;
+.parapharmacy-text h2 {
+  font-size: 1.8rem;
+  color: #4c4cad; /* Indigo for heading */
   margin-bottom: 10px;
 }
 
-.actions {
-  margin-top: 10px;
-}
-
-.price {
-  font-weight: bold;
-  color: #4caf50;
-  font-size: 1.2rem;
-  margin: 15px 0;
-}
-
-.btn {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
+.parapharmacy-text p {
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  color: #555; /* Darker gray for better contrast */
 }
 
-.btn:hover {
-  background-color: #388e3c;
-  transform: translateY(-2px);
+.parapharmacy-image {
+  max-width: 35%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Section */
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
+.category-container {
+  margin-bottom: 40px;
+}
+
+.category-card {
+  background-color: #faf9fe; /* Soft lavender for background */
   padding: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.footer p {
-  margin: 0;
-  font-size: 0.9rem;
+.category-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #4c4cad; /* Matches theme color */
+  text-align: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .categories {
-    flex-direction: column;
-    align-items: center;
-  }
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-  .category {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
+.product-card {
+  background: linear-gradient(145deg, #ffffff, #f0eefc); /* Subtle gradient for modern touch */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .product {
-    width: 100%;
-    max-width: 250px;
-  }
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #4c4cad; /* Indigo for product names */
+}
+
+.product-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #222;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.no-products {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.product-card button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6a4fbb; /* Rich purple for buttons */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #4936a3; /* Darker purple on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.product-card button:active {
+  background-color: #35257a; /* Deep purple for active state */
+  transform: translateY(0);
+}
+
+.product-card button:focus {
+  outline: none;
+  box-shadow: 0 0 4px 2px rgba(106, 79, 187, 0.5); /* Button focus shadow */
 }
